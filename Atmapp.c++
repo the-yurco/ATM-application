@@ -8,7 +8,7 @@ void showMenu()
     cout << "█ 1. Check balance                   █" << endl;
     cout << "█ 2. Deposit                         █" << endl;
     cout << "█ 3. Withdraw                        █" << endl;
-    cout << "█                                    █" << endl;
+    cout << "█ 4. Exit                            █" << endl;
     cout << "▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇" << endl;
 }
 
@@ -17,9 +17,11 @@ int main ()
     int option;
     double balance = 500;
 
+    do {
     showMenu();
-    cin >> "Option: ";
+    cout << "Option: ";
     cin >> option;
+    system("cls");
 
     switch(option)
     {
@@ -41,5 +43,6 @@ int main ()
             cout << "Not enough money" << endl;
         break;
     }
+    }while (option != 4);
     system ("pause > 0");
 }
